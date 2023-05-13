@@ -1,6 +1,11 @@
 ﻿namespace AkwadratDesign.Data.Enum
 {
-    public class Type
+    public enum Type
     {
+        KuchniaJadalnia,
+        Łazienka,
+        Biuro,
+        Sypialnia,
+        Salon
     }
 }
