@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AkwadratDesign.Models
+namespace AkwadratDesign.Models.DbModels
 {
     public class Admin
     {
