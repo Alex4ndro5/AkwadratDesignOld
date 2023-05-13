@@ -12,3 +12,4 @@ namespace AkwadratDesign.Models.DbModels
         public string Password { get; set; }
     }
 }
+ 
