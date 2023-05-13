@@ -1,4 +1,4 @@
-namespace AkwadratDesign.Models.DbModels
+namespace AkwadratDesign.Models
 {
     public class ErrorViewModel
     {
