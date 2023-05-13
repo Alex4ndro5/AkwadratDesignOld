@@ -6,7 +6,7 @@ namespace AkwadratDesign.Controllers
     public class ContactController : Controller
     {
         // GET: ContactController
-        public ActionResult Index()
+        public ActionResult Contact()
         {
             return View();
         }
