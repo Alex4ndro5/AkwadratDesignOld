@@ -1,6 +1,6 @@
 ﻿namespace AkwadratDesign.Models
 {
-    public class Admin
+    public class Firm
     {
     }
 }
