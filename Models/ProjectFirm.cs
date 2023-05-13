@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using AkwadratDesign.Models.DbModels;
+using Microsoft.Extensions.Hosting;
 
 namespace AkwadratDesign.Models
 {
