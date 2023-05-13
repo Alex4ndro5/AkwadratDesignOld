@@ -1,11 +1,11 @@
 ﻿namespace AkwadratDesign.Data.Enum
 {
-    public enum Type
+    public enum TypeProject
     {
         Kitchen,
         Bathroom,
-        Biuro,
+        Office,
         Bedroom,
-        Salon
+        LivingRoom
     }
 }

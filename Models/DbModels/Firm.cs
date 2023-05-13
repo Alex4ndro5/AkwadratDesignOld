@@ -14,5 +14,6 @@ namespace AkwadratDesign.Models.DbModels
         public int ClientId { get; set; }
         public Client Client { get; set; }
 
+        public List<ProjectFirm> ProjectFirms { get; set; }
     }
 }
