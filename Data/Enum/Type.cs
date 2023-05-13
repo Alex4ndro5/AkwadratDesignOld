@@ -2,10 +2,10 @@
 {
     public enum Type
     {
-        KuchniaJadalnia,
-        Łazienka,
+        Kitchen,
+        Bathroom,
         Biuro,
-        Sypialnia,
+        Bedroom,
         Salon
     }
 }
