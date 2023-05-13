@@ -1,6 +1,6 @@
 ﻿namespace AkwadratDesign.Models
 {
-    public class Klient
+    public class Client : Subject
     {
     }
 }
