@@ -1,6 +1,6 @@
 ﻿namespace AkwadratDesign.Models.DbModels
 {
-    public class Klient
+    public class Osoba
     {
     }
 }
