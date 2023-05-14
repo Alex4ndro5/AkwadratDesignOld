@@ -4,31 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AkwadratDesign</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/AkwadratDesign.styles.css" asp-append-version="true" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 </head>
 <body>
     <header>
-        <partial name="_menu.cshtml" /> 
+        <partial name="_Menu.cshtml" /> 
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="container" style="padding:0px">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - AkwadratDesign - <a asp-area="" asp-controller="Home" asp-action="Privacy">Polityka Prywatności</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <footer>AkwadratDesign.pl, 2023 All right reserved &copy;.</footer>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
