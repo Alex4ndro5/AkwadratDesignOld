@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
 }
 
 .container {
@@ -34,7 +35,7 @@
     padding: 16px 32px;
     font-size: 20;
     border-radius: 8px;
-    font-weight: 700;
+    font-weight: 200;
 }
 
 img {
@@ -176,14 +177,14 @@ section .container {
 
         .banner .container h1 {
             font-size: 64px;
-            font-weight: 700;
+            font-weight: 300;
             margin-bottom: 16px;
         }
 
         .banner .container h3 {
             font-size: 24px;
             margin-bottom: 32px;
-            font-weight: 400;
+            font-weight: 100;
             width: 60%;
         }
 
@@ -191,7 +192,7 @@ section .container {
 .banner .container span {
     font-size: 24px;
     margin: 0 0 20px 0;
-    font-weight: 600;
+    font-weight: 100;
 }
 
 .services .container {
@@ -203,72 +204,6 @@ section .container {
     grid-gap: 16px;
     grid-template-columns: repeat(4, 1fr);
 }
-
-@media screen and (max-width: 1024px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    header .container .logo h1 {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    header .container .logo img {
-        display: none;
-    }
-
-    .container h3 {
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    banner .container h1 {
-        font-size: 32px;
-    }
-
-    .banner .container h3 {
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .container {
-        padding-left: 64px;
-        padding-right: 64px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-}
-
-
 
 .service {
     background-color: var(--site2);
@@ -390,3 +325,55 @@ footer {
     color: var(--background);
     text-align: center;
 }
+
+
+@media screen and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    banner .container h1 {
+        font-size: 32px;
+    }
+
+    .banner .container h3 {
+        font-size: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header .container .logo h1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    header .container .logo img {
+        display: none;
+    }
+
+    .container h3 {
+        text-align: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
