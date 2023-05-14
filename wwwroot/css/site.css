@@ -20,19 +20,6 @@
     padding-right: 128px;
 }
 
-@media screen and (max-width: 1024px) {
-    .container {
-        padding-left: 64px;
-        padding-right: 64px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-}
 
 .button {
     appearance: none;
@@ -83,18 +70,6 @@ header {
             display: flex;
             align-items: center;
         }
-
-@media screen and (max-width: 1024px) {
-    header .container .logo h1 {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    header .container .logo img {
-        display: none;
-    }
-}
 
 header img {
     width: 64px;
@@ -212,15 +187,6 @@ section .container {
             width: 60%;
         }
 
-@media screen and (max-width: 1024px) {
-    banner .container h1 {
-        font-size: 32px;
-    }
-
-    .banner .container h3 {
-        font-size: 20px;
-    }
-}
 
 .banner .container span {
     font-size: 24px;
@@ -249,6 +215,60 @@ section .container {
         grid-template-columns: 1fr;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    header .container .logo h1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header .container .logo img {
+        display: none;
+    }
+
+    .container h3 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    banner .container h1 {
+        font-size: 32px;
+    }
+
+    .banner .container h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+
 
 .service {
     background-color: var(--site2);
@@ -286,17 +306,7 @@ section .container {
     margin: 0 0 32px 0;
 }
 
-@media screen and (max-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 .project {
     background-image: url(../Images/lazienka1.jpg);
