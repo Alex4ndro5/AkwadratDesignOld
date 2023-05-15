@@ -366,7 +366,7 @@ section .container {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(../Images/lazienka1.jpg);
+    background-image: url(../Images/mieszkanie1.jpg);
     background-position: center left;
     background-size: cover;
 }
