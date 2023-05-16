@@ -12,6 +12,7 @@ namespace AkwadratDesign.Controllers
             accountService = _accountService;
         }
 
+        [Route("/Admin")]
         public IActionResult Admin()
         {
             return View();
