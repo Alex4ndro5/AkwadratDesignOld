@@ -1,0 +1,41 @@
+﻿@{
+}
+<head>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" asp-append-version="true" />
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <form class="col-md-6">
+            <!-- Title input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="form2Example1" class="form-control" />
+                <label class="form-label" for="form2Example1">Tytuł</label>
+            </div>
+
+            <!-- Description input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="form2Example2" class="form-control" />
+                <label class="form-label" for="form2Example2">Opis</label>
+            </div>
+
+            <div>
+                <label class="form-label" for="customFile">Default file input example</label>
+                <input type="file" class="form-control" id="customFile" />
+            </div>
+
+            <button type="button" class="btn btn-primary btn-block mb-4">Prześlij</button>
+        </form>
+    </div>
+</body>
