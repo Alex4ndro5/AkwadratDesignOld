@@ -12,11 +12,18 @@ namespace AkwadratDesign.Controllers
         {
             _logger = logger;
         }
-
+        /// <summary>
+        /// Default controller method
+        /// </summary>
+        /// <returns>Returns view of landing page</returns>
         public IActionResult Index()
         {
             return View();
         }
+        /// <summary>
+        /// Default controller method, changes route to /polityka-prywatnosci
+        /// </summary>
+        /// <returns>Returns view of privacy page</returns>
         [Route("/polityka-prywatnosci/")]
         public IActionResult Privacy()
         {

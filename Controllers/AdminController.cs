@@ -11,8 +11,11 @@ namespace AkwadratDesign.Controllers
         {
             accountService = _accountService;
         }
-
-        [Route("/Admin")]
+        /// <summary>
+        /// Default controller method, changes route to /admin
+        /// </summary>
+        /// <returns>Returns view of admin page</returns>
+        [Route("/admin")]
         public IActionResult Admin()
         {
             return View();
