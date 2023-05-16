@@ -141,114 +141,35 @@
         width: calc( 100% - 56px * 2 - 16px );
     }
 
-.button__drow1,
-.button__drow2 {
-    position: absolute;
-    z-index: -1;
-    border-radius: 16px;
-    transform-origin: 16px 16px;
-}
 
-.button__drow1 {
-    top: -16px;
-    left: 40px;
-    width: 32px;
-    height: 0;
-    transform: rotate( 30deg );
-}
-
-.button__drow2 {
-    top: 44px;
-    left: 77px;
-    width: 32px;
-    height: 0;
-    transform: rotate(-127deg );
-}
-
-    .button__drow1::before,
-    .button__drow1::after,
-    .button__drow2::before,
-    .button__drow2::after {
-        content: '';
-        position: absolute;
-    }
-
-.button__drow1::before {
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 32px;
-    border-radius: 16px;
-    transform-origin: 16px 16px;
-    transform: rotate( -60deg );
-}
-
-.button__drow1::after {
-    top: -10px;
-    left: 45px;
-    width: 0;
-    height: 32px;
-    border-radius: 16px;
-    transform-origin: 16px 16px;
-    transform: rotate( 69deg );
-}
-
-.button__drow2::before {
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 32px;
-    border-radius: 16px;
-    transform-origin: 16px 16px;
-    transform: rotate( -146deg );
-}
-
-.button__drow2::after {
-    bottom: 26px;
-    left: -40px;
-    width: 0;
-    height: 32px;
-    border-radius: 16px;
-    transform-origin: 16px 16px;
-    transform: rotate( -262deg );
-}
-
-.button__drow1,
-.button__drow1::before,
-.button__drow1::after,
-.button__drow2,
-.button__drow2::before,
-.button__drow2::after {
-    background: var( --back_color );
-}
 
 .button:hover .button__drow1 {
-    animation: drow1 ease-in .06s;
+    
     animation-fill-mode: forwards;
 }
 
-    .button:hover .button__drow1::before {
-        animation: drow2 linear .08s .06s;
+    .button:hover  {
+        
         animation-fill-mode: forwards;
     }
 
-    .button:hover .button__drow1::after {
-        animation: drow3 linear .03s .14s;
+    .button:hover  {
+        
         animation-fill-mode: forwards;
     }
 
-.button:hover .button__drow2 {
-    animation: drow4 linear .06s .2s;
+.button:hover {
+    
     animation-fill-mode: forwards;
 }
 
-    .button:hover .button__drow2::before {
-        animation: drow3 linear .03s .26s;
+    .button:hover  {
+       
         animation-fill-mode: forwards;
     }
 
-    .button:hover .button__drow2::after {
-        animation: drow5 linear .06s .32s;
+    .button:hover  {
+        
         animation-fill-mode: forwards;
     }
 
@@ -551,6 +472,17 @@ footer {
     padding: 4px 0;
     color: var(--background);
     text-align: center;
+}
+.about .container{
+    min-height: 100vh; 
+}
+.about .container img {
+    --s: 10px; /* control the size */
+    padding: var(--s);
+    border: calc(2*var(--s)) solid #0000;
+    outline: 1px solid #000;
+    outline-offset: calc(-1*var(--s));
+    background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
 }
 
 
