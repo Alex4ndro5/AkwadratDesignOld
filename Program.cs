@@ -1,7 +1,12 @@
+using AkwadratDesign.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSession();
+builder.Services.AddScoped<IAccountService, AccountServiceImpl>();
 
 var app = builder.Build();
 

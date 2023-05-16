@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="center-container">
-        <form class="col-md-6">
+        <form class="col-md-6" method="post" asp-controller="Admin" asp-action="Upload">
             <!-- Login input -->
             <div class="form-outline mb-4">
                 <input type="text" id="form2Example1" class="form-control" />
@@ -42,7 +42,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+            <input type="submit" value="Prześlij" class="btn btn-primary btn-block mb-4"></input>
         </form>
     </div>
 </body>
