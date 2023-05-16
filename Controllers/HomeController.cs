@@ -17,7 +17,7 @@ namespace AkwadratDesign.Controllers
         {
             return View();
         }
-
+        [Route("/polityka-prywatnosci/")]
         public IActionResult Privacy()
         {
             return View();
