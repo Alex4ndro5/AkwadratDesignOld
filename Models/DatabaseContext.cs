@@ -7,6 +7,10 @@ namespace AkwadratDesign.Models
 {
     public class DatabaseContext : DbContext
     {
+        public DatabaseContext()
+        {
+        }
+
         public DatabaseContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Admin> Admin { get; set; }

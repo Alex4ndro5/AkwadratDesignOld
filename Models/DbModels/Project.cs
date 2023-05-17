@@ -15,5 +15,19 @@ namespace AkwadratDesign.Models.DbModels
 
         public List<ProjectFirm> ProjectFirms { get; } = new();
         public List<Firm> Firms { get; } = new();
+
+        public Project()
+        {
+            
+        }
+
+        public Project(string title, string description, string image, TypeProject type, TypeClient typeClient)
+        {
+            Title = title;
+            Description = description;
+            Image = image;
+            Type = type;
+            TypeClient = typeClient;
+        }
     }
 }
