@@ -13,6 +13,7 @@ namespace AkwadratDesign.Models.DbModels
         public TypeProject Type { get; set; }
         public TypeClient TypeClient { get; set; }
 
-        public List<ProjectFirm> ProjectFirms { get; set;}
+        public List<ProjectFirm> ProjectFirms { get; } = new();
+        public List<Firm> Firms { get; } = new();
     }
 }

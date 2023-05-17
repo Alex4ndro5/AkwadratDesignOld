@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AkwadratDesign.Models.DbModels
 {
-    public class Client :IdentityUser
+    public class Client : IdentityUser
     {
         [Key]
-        private int Id { get; set; }
+        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]  

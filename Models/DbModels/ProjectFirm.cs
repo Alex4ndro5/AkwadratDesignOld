@@ -1,4 +1,6 @@
-﻿namespace AkwadratDesign.Models.DbModels
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AkwadratDesign.Models.DbModels
 {
     public class ProjectFirm
     {
