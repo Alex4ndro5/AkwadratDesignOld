@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AkwadratDesign.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230517114439_DatabaseContextFirstCreate")]
-    partial class DatabaseContextFirstCreate
+    [Migration("20230518183102_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,27 +24,6 @@ namespace AkwadratDesign.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("AkwadratDesign.Models.DbModels.Admin", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Login")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Admin");
-                });
 
             modelBuilder.Entity("AkwadratDesign.Models.DbModels.Client", b =>
                 {
@@ -180,6 +159,27 @@ namespace AkwadratDesign.Migrations
                     b.HasIndex("ProjectsId");
 
                     b.ToTable("ProjectFirms");
+                });
+
+            modelBuilder.Entity("AkwadratDesign.Models.DbModels.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("AkwadratDesign.Models.DbModels.Firm", b =>

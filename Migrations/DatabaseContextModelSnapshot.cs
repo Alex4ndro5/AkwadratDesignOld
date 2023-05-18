@@ -22,27 +22,6 @@ namespace AkwadratDesign.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AkwadratDesign.Models.DbModels.Admin", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Login")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Admin");
-                });
-
             modelBuilder.Entity("AkwadratDesign.Models.DbModels.Client", b =>
                 {
                     b.Property<int>("Id")
@@ -177,6 +156,27 @@ namespace AkwadratDesign.Migrations
                     b.HasIndex("ProjectsId");
 
                     b.ToTable("ProjectFirms");
+                });
+
+            modelBuilder.Entity("AkwadratDesign.Models.DbModels.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("AkwadratDesign.Models.DbModels.Firm", b =>
