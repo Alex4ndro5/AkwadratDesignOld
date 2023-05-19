@@ -1,13 +1,10 @@
 using AkwadratDesign.Models;
+using AkwadratDesign.Models.DbModels;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Requires Microsoft.AspNetCore.Authentication.JwtBearer
-builder.Services.AddAuthentication()
-                .AddJwtBearer();
-
-builder.Services.AddAuthorization();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -15,8 +12,12 @@ builder.Services.AddControllersWithViews();
 var provider = builder.Services.BuildServiceProvider();
 var configuration = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddDbContext<DatabaseContext>(item => item.UseSqlServer(configuration.GetConnectionString("myconn")));
-
+builder.Services.AddIdentity<AppUser, IdentityRole>()
+                .AddEntityFrameworkStores<DatabaseContext>();
+builder.Services.AddMemoryCache();
 builder.Services.AddSession();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie();
 
 var app = builder.Build();
 
