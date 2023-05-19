@@ -13,7 +13,7 @@ namespace AkwadratDesign.Models
 
         public DatabaseContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Admin> Admin { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Firm> Firms { get; set; }
         public DbSet<Project> Projects { get; set; }

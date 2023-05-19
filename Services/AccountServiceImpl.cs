@@ -4,21 +4,21 @@ namespace AkwadratDesign.Services
 {
     public class AccountServiceImpl : IAccountService
     {
-        private List<Admin> accounts; 
+        private List<User> accounts; 
 
 
         public AccountServiceImpl()
         {
-            accounts = new List<Admin>
+            accounts = new List<User>
             {
-                new Admin
+                new User
                 {
                     Login= "123",
                     Password = "123"
                 }
             };
         }
-        public Admin Login(string login, string password)
+        public User Login(string login, string password)
         {
             return accounts.SingleOrDefault(a => a.Login == login && a.Password == password);
         }
