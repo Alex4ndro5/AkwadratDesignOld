@@ -46,7 +46,7 @@ namespace AkwadratDesign.Controllers
 
 
         // GET: Projects
-        public async Task<IActionResult> Portfolio()
+        public async Task<IActionResult> Index()
         {
             return _context.Projects != null ?
                         View(await _context.Projects.ToListAsync()) :
@@ -79,7 +79,7 @@ namespace AkwadratDesign.Controllers
 
         // POST: Projects/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Upload([Bind("Id,Title,Description,Image,Type,TypeClient")] Project project)
