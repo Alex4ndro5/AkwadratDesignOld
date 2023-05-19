@@ -74,7 +74,7 @@ namespace AkwadratDesign.Controllers
         // GET: Projects/Create
         public IActionResult Upload()
         {
-            return View(new Project());
+            return View();
         }
 
         // POST: Projects/Create
