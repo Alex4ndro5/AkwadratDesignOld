@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace AkwadratDesign.Models.DbModels
 {
-    public class User
+    public class AppUser : IdentityUser
     {
         [Key]
-        public int Id { get; set; }
+        public int AppUserId { get; set; }
         [Required]
         public string Login { get; set; }
         [Required]

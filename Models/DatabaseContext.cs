@@ -1,11 +1,12 @@
 ﻿using AkwadratDesign.Models.DbModels;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using System.Data.SqlClient;
 
 namespace AkwadratDesign.Models
 {
-    public class DatabaseContext : DbContext
+    public class DatabaseContext : IdentityDbContext<AppUser>
     {
         public DatabaseContext()
         {
@@ -13,7 +14,7 @@ namespace AkwadratDesign.Models
 
         public DatabaseContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Firm> Firms { get; set; }
         public DbSet<Project> Projects { get; set; }
@@ -21,6 +22,7 @@ namespace AkwadratDesign.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Project>()
             .HasMany(e => e.Firms)

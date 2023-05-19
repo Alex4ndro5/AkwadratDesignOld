@@ -6,7 +6,7 @@ namespace AkwadratDesign.Models.DbModels
     public class Firm
     {
         [Key]  
-        public int Id { get; set; }
+        public int FirmId { get; set; }
         [Required]
         public string FirmName { get; set; }
 

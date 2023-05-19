@@ -6,7 +6,7 @@ namespace AkwadratDesign.Models.DbModels
     public class Client : IdentityUser
     {
         [Key]
-        public int Id { get; set; }
+        public int ClientId { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]  
